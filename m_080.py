@@ -1,0 +1,36 @@
+from ev3dev.ev3 import *
+from time import sleep
+btn = Button()
+while True:
+  if btn.any():
+    a=LargeMotor('outB')
+    a.run_to_rel_pos(position_sp=-900, speed_sp=700, stop_action="hold")
+    b=LargeMotor('outC')
+    b.run_to_rel_pos(position_sp=-900, speed_sp=700, stop_action="hold")
+    sleep(2)
+    
+    a.run_to_rel_pos(position_sp=170, speed_sp=500, stop_action="hold")
+    b.run_to_rel_pos(position_sp=-170, speed_sp=500, stop_action="hold")
+    sleep(2)
+    
+    a.run_to_rel_pos(position_sp=-750, speed_sp=700, stop_action="hold")
+    b.run_to_rel_pos(position_sp=-750, speed_sp=700, stop_action="hold")
+    sleep(2)
+    a.run_to_rel_pos(position_sp=170, speed_sp=500, stop_action="hold")
+    b.run_to_rel_pos(position_sp=-170, speed_sp=500, stop_action="hold")
+    sleep(2)
+    a.run_to_rel_pos(position_sp=-950, speed_sp=700, stop_action="hold")
+    b.run_to_rel_pos(position_sp=-950, speed_sp=700, stop_action="hold")
+    sleep(2)
+    a.run_to_rel_pos(position_sp=170, speed_sp=500, stop_action="hold")
+    b.run_to_rel_pos(position_sp=-170, speed_sp=500, stop_action="hold")
+    sleep(2)
+    a.run_to_rel_pos(position_sp=-800, speed_sp=700, stop_action="hold")
+    b.run_to_rel_pos(position_sp=-800, speed_sp=700, stop_action="hold")
+    sleep(2)
+    a.run_to_rel_pos(position_sp=170, speed_sp=500, stop_action="hold")
+    b.run_to_rel_pos(position_sp=-170, speed_sp=500, stop_action="hold")
+    sleep(2)
+    a.run_to_rel_pos(position_sp=-1000, speed_sp=700, stop_action="hold")
+    b.run_to_rel_pos(position_sp=-1000, speed_sp=700, stop_action="hold")
+    exit()
